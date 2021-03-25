@@ -82,17 +82,29 @@ body {
   max-width: 75%;
 }
 
-a {
+.header a {
   color: #ffffff;
   text-decoration: none;
   display: inline-block;
   margin-left: 25px;
 }
 
-a:hover {
+.header a:hover {
   border-bottom: 1px solid #00bb3ea9;
   color: yellow;
 }
+
+.content a {
+  /* color: #ffffff; */
+  text-decoration: none;
+  display: inline-block;
+  margin-left: 25px;
+}
+
+/* .content a:hover {
+  border-bottom: 1px solid #00bb3ea9;
+  color: yellow;
+} */
 
 .hero {
   height: 640px;
@@ -117,21 +129,19 @@ a:hover {
   margin-left: auto;
 }
 
-.main .about {
+.content {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   background-color: #ffffff;
   color: #00bb3ea9;
   margin-bottom: 20px;
   padding: 50px;
 
-  margin-left: -15px;
-  margin-right: -15px;
-
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
 }
 
-.main .about .col1 {
+.content .col1 {
   font-family: "Papyrus", "Montserrat", "Sans-Serif";
   font-style: italic;
   font-size: 1.5rem;
@@ -148,7 +158,79 @@ a:hover {
   max-width: 25%;
 }
 
-.main .about .col2 {
+.content .col2 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 1.5rem;
+  display: inline-block;
+
+  position: relative;
+  width: 100%;
+  padding: 15px;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  flex: 0 0 75%;
+  max-width: 75%;
+}
+
+.content .col2 .full {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 0 0 100%;
+  padding: 15px;
+}
+
+.content .col2 .split {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 0 0 50%;
+  padding: 15px;
+}
+
+/* FOOTER */
+.footer {
+  font-family: "Montserrat", "Sans-Serif";
+  font-size: 2rem;
+
+  background-color: #29313c;
+  color: #ffffff;
+
+  width: 100%;
+  float: left;
+  height: auto;
+
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.footer nav {
+  margin-left: -15px;
+  margin-right: -15px;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer nav .col1 {
+  font-family: "Papyrus", "Montserrat", "Sans-Serif";
+  font-style: italic;
+  letter-spacing: 0.1rem;
+  text-align: left;
+
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+
+  flex: 0 0 25%;
+  max-width: 25%;
+}
+
+.footer nav .col2 {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-size: 1.5rem;
   display: inline-block;
@@ -161,37 +243,80 @@ a:hover {
   max-width: 75%;
 }
 
-.work {
-  margin-bottom: 20px;
-  padding: 50px;
-  /* height: 300px; */
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  /* background-color: #00bb3ea9; */
-  background-color: #ffffff;
-  /* color: #ffffff; */
-  color: #00bb3ea9;
-  /* overflow: auto; */
-
-  /* display: inline-block; */
+.footer h4 {
+  display: inline-block;
 }
 
-.contact {
-  margin-bottom: 20px;
-  padding: 50px;
-  /* height: 300px; */
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  /* background-color: #00bb3ea9; */
-  background-color: #ffffff;
-  /* color: #ffffff; */
-  color: #00bb3ea9;
-  /* overflow: auto; */
+.footer a {
+  color: #ffffff;
+  text-decoration: none;
+  display: inline-block;
+  margin-left: 25px;
+}
 
-  /* display: inline-block; */
+.footer a:hover {
+  border-bottom: 1px solid #00bb3ea9;
+  color: yellow;
+}
+
+.content a {
+  /* color: #ffffff; */
+  text-decoration: none;
+  display: inline-block;
+  margin-left: 25px;
+}
+
+.footer1 {
+  justify-content: center;
+  width: 100%;
+
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+
+  background-image: url("../images/arborday.jpg");
+  /* background-size: cover; */
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.footer1 a {
+  color: #00bb3ea9;
+}
+
+.footer1 a:hover {
+  border-bottom: 1px solid #00bb3ea9;
+  color: yellow;
+}
+
+.footer1 a:visited,
+a:active {
+  border-bottom: 1px solid #00bb3ea9;
+  /* color: yellow; */
+}
+
+.footer1 a {
+  /* color: #ffffff; */
+  text-decoration: none;
+  display: inline-block;
+  margin-left: 25px;
+}
+
+.footer2 {
+  height: 150px;
+  width: auto;
+  margin-bottom: 25px;
+  background-image: url("../images/arborday.jpg");
+  /* background-size: cover; */
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 /* MEDIA QUERIES */
 @media screen and (min-width: 0px) and (max-width: 576px) {
-  .header {
+  .header,
+  .footer {
     background-color: green;
     /* display: flex;
     flex-direction: row;
@@ -216,7 +341,7 @@ a:hover {
     max-width: 100%;
   }
 
-  .main .about .col1 {
+  .content .col1 {
     font-size: 1rem;
     text-align: center;
     padding: 5px 5px;
@@ -228,7 +353,25 @@ a:hover {
     max-width: 100%;
   }
 
-  .main .about .col2 {
+  .content .col2 {
+    font-size: 1rem;
+    text-align: center;
+    padding: 5px 5px;
+
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .footer nav .col1 {
+    font-size: 1rem;
+    text-align: center;
+    padding: 5px 5px;
+
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .footer nav .col2 {
     font-size: 1rem;
     text-align: center;
     padding: 5px 5px;
