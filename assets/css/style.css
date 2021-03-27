@@ -142,21 +142,27 @@ main section div > img.family1 {
   /* display: inline-block; */
 }
 
+/* main section div div.polaroid,
+main section.container div.project-card div.full img { */
+
 main section div div.polaroid {
   background-color: white;
+  margin-bottom: 15px;
   border: 1px solid #dddddd;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   width: 50%;
 }
 
+/* main section div div.label,
+main section.container div.project-card div.full h5 a { */
 main section div div.label {
   text-align: center;
   padding: 10px 20px;
 }
 
-main section div.polaroid:hover {
+/* main section div.polaroid:hover {
   box-shadow: 0 0 2px 1px var(--chocoyo-dark-green);
-}
+} */
 
 /*
   MAIN
