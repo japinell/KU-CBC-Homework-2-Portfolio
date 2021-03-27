@@ -2,13 +2,20 @@
   VARIABLES    
 */
 :root {
+  --working-area: 50%;
+  --chocoyo-green: #276721;
+  --chocoyo-yellow: #969c24;
+  --chocoyo-green-dark: #0c1b07;
+  --flower-orange: #ef6100;
   --screen-size-xs: 0;
   --screen-size-sm: 576px;
   --screen-size-md: 768px;
   --screen-size-lg: 992px;
   --screen-size-xl: 1200px;
-  --font-family-mono: monospace;
-  --font-family-sans: sans-serif;
+  --header-font-family: "Papyrus", "Montserrat", "Sans-Serif";
+  --body-font-family: "Montserrat", "Sans-Serif";
+  --nav-font-family: "Gill Sans", "Gill Sans MT", "Calibri", "Trebuchet MS",
+    "Sans-Serif";
   --fsize: 10px;
 }
 
@@ -22,9 +29,9 @@
 }
 
 body {
-  font-family: "Montserrat", "Sans-Serif";
-  font-size: 10px;
-  background-color: #d9dcd6;
+  font-family: var(--body-font-family);
+  font-size: var(--fsize);
+  background-color: white;
 }
 
 img {
@@ -35,126 +42,137 @@ img {
 /*
   HEADER     
 */
-.header {
-  font-family: "Montserrat", "Sans-Serif";
-  font-size: 2rem;
+header {
+  /* background-image: url("../images/flowers.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; */
 
-  background-color: #29313c;
-  color: #ffffff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  background-color: var(--chocoyo-green-dark);
+  color: var(--chocoyo-yellow);
+  border: 1px dashed var(--chocoyo-green-dark);
+  border-radius: 10px;
+
+  height: 100px;
+  width: var(--working-area);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+header > h1 {
+  font-family: var(--header-font-family);
+  color: white;
+  font-size: 2rem;
+  font-style: italic;
+  letter-spacing: 0.1rem;
+  text-align: center;
+
+  padding-top: 15px;
+  width: 100%;
+}
+
+header > nav {
+  font-family: var(--nav-font-family);
+  font-size: 1.5rem;
+
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
 
   width: 100%;
-  float: left;
-  height: auto;
+  padding: 15px;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  margin-left: 25px;
+}
+
+header a:hover {
+  color: yellow;
+  border-bottom: 2px solid #00bb3ea9;
+}
+
+.hero {
+  background-image: url("../images/chocoyos.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  border: 1px dashed var(--chocoyo-green-dark);
+  border-radius: 10px;
+  /* box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset */
+
+  height: 940px;
+  width: var(--working-area);
+  margin: auto;
+}
+
+/*
+  MAIN
+*/
+main {
+  /* display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; */
+
+  justify-content: center;
+  border: 1px dashed var(--chocoyo-green-dark);
+  border-radius: 10px;
 
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
+
+  width: var(--working-area);
+  margin-right: auto;
+  margin-left: auto;
 }
 
-.header nav {
-  margin-left: -15px;
-  margin-right: -15px;
-
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-
-.header nav .col1 {
-  font-family: "Papyrus", "Montserrat", "Sans-Serif";
+main > h1 {
+  font-family: var(--body-font-family);
+  color: var(--chocoyo-yellow);
+  font-size: 2rem;
   font-style: italic;
   letter-spacing: 0.1rem;
-  text-align: left;
+  text-align: center;
 
+  padding-top: 15px;
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
-
-  flex: 0 0 25%;
-  max-width: 25%;
-}
-
-.header nav .col2 {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-size: 1.5rem;
-  display: inline-block;
-
-  position: relative;
-  width: 100%;
-  padding: 15px;
-
-  flex: 0 0 75%;
-  max-width: 75%;
-}
-
-.header a {
-  color: #ffffff;
-  text-decoration: none;
-  display: inline-block;
-  margin-left: 25px;
-}
-
-.header a:hover {
-  border-bottom: 1px solid #00bb3ea9;
-  color: yellow;
-}
-
-.content a {
-  /* color: #ffffff; */
-  text-decoration: none;
-  display: inline-block;
-  margin-left: 25px;
-}
-
-/* .content a:hover {
-  border-bottom: 1px solid #00bb3ea9;
-  color: yellow;
-} */
-
-.hero {
-  height: 640px;
-  width: 100%;
-  margin-bottom: 25px;
-  background-image: url("../images/pexels-ryutaro-tsukata.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
 /*
   CONTENT   
 */
-.main {
-  justify-content: center;
-  width: 100%;
-
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
-}
-
-.content {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+.container {
+  font-family: var(--nav-font-family);
   background-color: #ffffff;
-  color: #00bb3ea9;
-  margin-bottom: 20px;
-  padding: 50px;
+  color: var(--chocoyo-green-dark);
+  margin-bottom: 0px;
+  padding: 15px;
 
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
 
-.content .col1 {
+.container .heading {
   font-family: "Papyrus", "Montserrat", "Sans-Serif";
-  font-style: italic;
+  /* font-style: italic; */
+  font-weight: 200;
   font-size: 1.5rem;
   letter-spacing: 0.1rem;
   text-align: left;
 
-  border-right: 2px solid #00bb3ea9;
+  border-right: 1px solid var(--chocoyo-green-dark);
 
   width: 100%;
   padding-right: 15px;
@@ -164,7 +182,7 @@ img {
   max-width: 25%;
 }
 
-.content .col2 {
+.container .content {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-size: 1.5rem;
   display: inline-block;
@@ -180,7 +198,16 @@ img {
   max-width: 75%;
 }
 
-.content .col2 .full {
+.container .content > p {
+  padding-bottom: 15px;
+}
+
+.container .content > blockquote {
+  padding-left: 15px;
+  font-style: italic;
+}
+
+.container .content .full {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -188,7 +215,7 @@ img {
   padding: 15px;
 }
 
-.content .col2 .split {
+.container .content .split {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -196,48 +223,64 @@ img {
   padding: 15px;
 }
 
+.container a {
+  /* color: #ffffff; */
+  text-decoration: none;
+  display: inline-block;
+  margin-left: 25px;
+}
+
 /* FOOTER */
-.footer {
-  font-family: "Montserrat", "Sans-Serif";
-  font-size: 2rem;
-  background-color: #29313c;
-  color: #ffffff;
+footer {
+  /* background-image: url("../images/flowers.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; */
 
-  width: 100%;
-  float: left;
-  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 
-  padding-right: 15px;
-  padding-left: 15px;
+  background-color: var(--chocoyo-green-dark);
+  color: var(--chocoyo-yellow);
+  border: 1px dashed var(--chocoyo-green-dark);
+  border-radius: 10px;
+
+  /* height: 150px; */
+  width: var(--working-area);
   margin-right: auto;
   margin-left: auto;
 }
 
-.footer nav {
-  margin-left: -15px;
-  margin-right: -15px;
+footer > h1 {
+  font-family: var(--header-font-family);
+  color: white;
+  font-size: 1.5rem;
+  font-style: italic;
+  letter-spacing: 0.1rem;
+  text-align: center;
+
+  padding-top: 15px;
+  width: 100%;
+}
+
+footer > nav {
+  font-family: var(--nav-font-family);
+  font-size: 1.5rem;
 
   display: flex;
   flex-wrap: wrap;
-}
-
-.footer nav .col1 {
-  font-family: "Papyrus", "Montserrat", "Sans-Serif";
-  font-style: italic;
-  letter-spacing: 0.1rem;
-  text-align: left;
+  flex-direction: row;
+  justify-content: space-around;
 
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
-
-  flex: 0 0 25%;
-  max-width: 25%;
+  padding: 15px;
 }
 
-.footer nav .col2 {
+footer nav .content {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-size: 1rem;
+  text-align: center;
   display: inline-block;
 
   position: relative;
@@ -248,105 +291,97 @@ img {
   max-width: 75%;
 }
 
-.footer .col2 {
-  /* width: 20%; */
-  /* float: left; */
-  text-align: left;
-  font-size: 1rem;
-  color: #ffffff;
-  line-height: 25px;
-  margin-left: 0px;
-  font-weight: 100;
-
-  /* flex: 0 0 20%;
-  max-width: 20%; */
+footer span {
+  /* color: var(--chocoyo-yellow); */
+  color: white;
+  padding: 0px;
 }
 
-.footer span {
-  padding-left: 10px;
-}
-
-.footer h4 {
-  display: inline-block;
-}
-
-.footer a {
+footer a {
   color: #ffffff;
   text-decoration: none;
   display: inline-block;
-  margin-left: 25px;
+
+  padding: 0px;
 }
 
-.footer a:hover {
-  border-bottom: 1px solid #00bb3ea9;
-  color: yellow;
-}
-
-.content a {
-  /* color: #ffffff; */
+footer div > .phone::before {
+  content: "Phone: ";
   text-decoration: none;
-  display: inline-block;
-  margin-left: 25px;
 }
 
-.footer1 {
-  justify-content: center;
-  width: 100%;
-
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
-
-  background-image: url("../images/arborday.jpg");
-  /* background-size: cover; */
-  background-position: center;
-  background-repeat: no-repeat;
+footer div > .email::before {
+  content: "Email: ";
 }
 
-.footer1 a {
-  color: #00bb3ea9;
+footer div > .github::before {
+  content: "GitHub: ";
 }
 
-.footer1 a:hover {
-  border-bottom: 1px solid #00bb3ea9;
+footer div > .twitter::before {
+  content: "Twitter: ";
+}
+
+footer div > .spotify::before {
+  content: "Spotify: ";
+}
+
+footer a::after {
+  content: " |";
+}
+
+footer a:last-child::after {
+  content: unset;
+}
+
+footer a:hover {
+  border-bottom: 1px solid var(--chocoyo-green);
   color: yellow;
-}
-
-.footer1 a:visited,
-a:active {
-  border-bottom: 1px solid #00bb3ea9;
-  /* color: yellow; */
-}
-
-.footer1 a {
-  /* color: #ffffff; */
-  text-decoration: none;
-  display: inline-block;
-  margin-left: 25px;
-}
-
-.footer2 {
-  height: 150px;
-  width: auto;
-  margin-bottom: 25px;
-  background-image: url("../images/arborday.jpg");
-  /* background-size: cover; */
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
 /* MEDIA QUERIES */
-@media screen and (min-width: 0px) and (max-width: 576px) {
-  .header,
-  .footer {
-    background-color: green;
-    /* display: flex;
-    flex-direction: row;
-    flex-wrap: wrap; */
+/* 
+  Works well with Desktop, iPads, and Kindle Fire.
+
+  TODO:
+        Improve iPhone and Galaxy responsiveness.
+*/
+@media screen and (min-width: 0px) and (max-width: 1280px) {
+  header,
+  footer {
+    background-color: var(--chocoyo-green);
+    /* display: flex; */
+    /* flex-direction: row; */
+    /* align-items: center; */
+    /* flex-wrap: wrap; */
   }
 
-  .header nav .col1 {
+  header > h1,
+  header > nav,
+  footer > h1,
+  footer > nav {
+    font-size: 1rem;
+  }
+
+  .hero {
+    display: none;
+    /* transform: scale(0.5); */
+  }
+
+  main section div img {
+    transform: scale(0.75);
+  }
+
+  .header nav .heading {
+    font-size: 1rem;
+    text-align: center;
+    padding: 5px 5px;
+
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .header nav .content {
     font-size: 1rem;
     text-align: center;
     padding: 5px 5px;
@@ -355,16 +390,7 @@ a:active {
     max-width: 100%;
   }
 
-  .header nav .col2 {
-    font-size: 1rem;
-    text-align: center;
-    padding: 5px 5px;
-
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
-
-  .content .col1 {
+  .container .heading {
     font-size: 1rem;
     text-align: center;
     padding: 5px 5px;
@@ -376,7 +402,7 @@ a:active {
     max-width: 100%;
   }
 
-  .content .col2 {
+  .container .content {
     font-size: 1rem;
     text-align: center;
     padding: 5px 5px;
@@ -385,7 +411,7 @@ a:active {
     max-width: 100%;
   }
 
-  .footer nav .col1 {
+  .footer nav .heading {
     font-size: 1rem;
     text-align: center;
     padding: 5px 5px;
@@ -394,7 +420,7 @@ a:active {
     max-width: 100%;
   }
 
-  .footer nav .col2 {
+  .footer nav .content {
     font-size: 1rem;
     text-align: center;
     padding: 5px 5px;
