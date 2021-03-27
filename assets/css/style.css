@@ -4,8 +4,8 @@
 :root {
   --working-area: 50%;
   --chocoyo-green: #276721;
+  --chocoyo-dark-green: #0c1b07;
   --chocoyo-yellow: #969c24;
-  --chocoyo-green-dark: #0c1b07;
   --flower-orange: #ef6100;
   --screen-size-xs: 0;
   --screen-size-sm: 576px;
@@ -52,9 +52,9 @@ header {
   flex-wrap: wrap;
   justify-content: space-around;
 
-  background-color: var(--chocoyo-green-dark);
+  background-color: var(--chocoyo-dark-green);
   color: var(--chocoyo-yellow);
-  border: 1px dashed var(--chocoyo-green-dark);
+  border: 1px dashed var(--chocoyo-dark-green);
   border-radius: 10px;
 
   height: 100px;
@@ -106,7 +106,7 @@ header a:hover {
   background-position: center;
   background-repeat: no-repeat;
 
-  border: 1px dashed var(--chocoyo-green-dark);
+  border: 1px dashed var(--chocoyo-dark-green);
   border-radius: 10px;
   /* box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset */
 
@@ -124,7 +124,7 @@ main {
   justify-content: space-around; */
 
   justify-content: center;
-  border: 1px dashed var(--chocoyo-green-dark);
+  border: 1px dashed var(--chocoyo-dark-green);
   border-radius: 10px;
 
   padding-right: 15px;
@@ -155,7 +155,7 @@ main > h1 {
 .container {
   font-family: var(--nav-font-family);
   background-color: #ffffff;
-  color: var(--chocoyo-green-dark);
+  color: var(--chocoyo-dark-green);
   margin-bottom: 0px;
   padding: 15px;
 
@@ -172,7 +172,7 @@ main > h1 {
   letter-spacing: 0.1rem;
   text-align: left;
 
-  border-right: 1px solid var(--chocoyo-green-dark);
+  border-right: 1px solid var(--chocoyo-dark-green);
 
   width: 100%;
   padding-right: 15px;
@@ -222,12 +222,14 @@ main > h1 {
   margin: 0px;
   padding: 0.5rem;
   color: white;
-  background: var(--chocoyo-green-dark);
+  background: var(--chocoyo-dark-green);
   border-top-left-radius: 0.5rem;
   padding-bottom: 15px;
 }
 
 .container .content .project-card div > img {
+  height: 100px;
+  width: var(--working-area);
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
 }
@@ -248,6 +250,9 @@ main > h1 {
   list-style-type: none;
   display: inline-flex;
   justify-content: center;
+
+  border-bottom: 1px solid var(--chocoyo-dark-green);
+
   flex-wrap: wrap;
   margin: 0px;
   padding: 1rem;
@@ -256,10 +261,15 @@ main > h1 {
 
 .container .project-card ul > li {
   color: white;
-  background-color: var(--chocoyo-yellow);
+  background-color: var(--chocoyo-dark-green);
+  text-align: center;
+  /* padding-top: 0.5rem; */
+  padding: 0.5rem;
+
   flex: 1 0 5rem;
   max-width: 10rem;
-  text-align: center;
+  height: 2rem;
+
   margin: 0.5rem;
   border-radius: 1rem;
 }
@@ -277,7 +287,7 @@ main > h1 {
   padding: 15px;
 }
 
-.container .content .full {
+.container .content .full1 {
   position: relative;
   margin: 0px;
 }
@@ -308,9 +318,9 @@ footer {
   flex-wrap: wrap;
   justify-content: space-around;
 
-  background-color: var(--chocoyo-green-dark);
+  background-color: var(--chocoyo-dark-green);
   color: var(--chocoyo-yellow);
-  border: 1px dashed var(--chocoyo-green-dark);
+  border: 1px dashed var(--chocoyo-dark-green);
   border-radius: 10px;
 
   /* height: 150px; */
