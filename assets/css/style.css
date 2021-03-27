@@ -160,9 +160,12 @@ main section div div.label {
   padding: 10px 20px;
 }
 
-/* main section div.polaroid:hover {
-  box-shadow: 0 0 2px 1px var(--chocoyo-dark-green);
-} */
+main section.container div.project-card div.full > a:hover,
+main section.container div.project-card div.split > a:hover {
+  /* box-shadow: 0 0 2px 1px var(--flower-orange); */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 var(--chocoyo-dark-green);
+}
 
 /*
   MAIN
