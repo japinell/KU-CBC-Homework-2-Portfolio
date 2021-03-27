@@ -46,8 +46,8 @@ The following animation shows the web application's appearance and functionality
 
 1. URL of the deployed application:
 
-https://japinell.github.io/Portfolio/
+https://japinell.github.io/KU-CBC-Homework-2-Portfolio/
 
 2. URL of the GitHub repository:
 
-https://github.com/japinell/Portfolio
+https://github.com/japinell/KU-CBC-Homework-2-Portfolio
